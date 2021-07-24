@@ -1,0 +1,6 @@
+.progress-bar::before {
+  content: attr(data-value);
+  top: 0;
+  right: 0;
+  position: absolute;
+}

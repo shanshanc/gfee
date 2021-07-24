@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Subheader from './containers/Subheader';
+import MainContent from './containers/MainContent';
+
 import './App.css';
 
 function App() {
+  const [showSubheader, setShowSubheader] = useState(true);
+
+  const handleSubheader = () => {
+    setShowSubheader(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col justify-items-center">
+      <div className="container flex flex-col h-screen">
+        <Header />
+        {showSubheader ? <Subheader handleHideself={handleSubheader}/> : null}
+        <MainContent />
+        <Footer />
+      </div>
     </div>
   );
 }
