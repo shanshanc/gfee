@@ -4,4 +4,6 @@ In the project directory, you can run:
 #### `npm install`
 #### `npm start`
 
-#### Or check demo via [CodeSandboxLink](https://codesandbox.io/s/determined-wright-4rcmc)
+---
+#### Screenshot
+<img src="src/images/card.png" width="100">
